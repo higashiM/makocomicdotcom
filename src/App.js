@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import ProjectCard from "./components/ProjectCard";
+import { projectText } from "./resources/projectCards/projectText";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return projectText.map((project) => {
+    return (
+      <ProjectCard
+        title={project.title}
+        description={project.description}
+        altDescription={project.altDescription}
+        imgSrc={project.imgSrc}
+        imgTitle={project.imgTitle}
+        altImgSrc={project.altImgSrc}
+        altImgTitle={project.altImgTitle}
+        gitHubFront={project.gitHubFront}
+        gitHubBack={project.gitHubBack}
+        frontURL={project.frontURL}
+        backURL={project.backURL}
+        presentation={project.presentation}
+      />
+    );
+  });
 }
 
 export default App;
