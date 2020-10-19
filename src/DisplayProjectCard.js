@@ -5,14 +5,17 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 
+import { MobileScreenQuery } from './MediaQuery';
+
 function DisplayProjectCard() {
 	const useStyles = makeStyles({
 		root: {
 			//padding: '30px 30px'
 		},
+
 		container: {
 			display: 'grid',
-			gridTemplateColumns: '1fr 1fr',
+			gridTemplateColumns: MobileScreenQuery() ? '1fr 1fr' : '1fr',
 			padding: '30px 30px'
 		}
 	});

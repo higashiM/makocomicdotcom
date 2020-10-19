@@ -7,6 +7,8 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import DisplayProjectCard from '../DisplayProjectCard';
+import DisplayAbout from '../DisplayAbout';
+import DisplayBlog from '../DisplayBlog';
 
 function TabPanel(props) {
 	const { children, value, index, ...other } = props;
@@ -74,17 +76,17 @@ export default function NavTabs() {
 				<Tabs variant="fullWidth" value={value} onChange={handleChange} aria-label="nav tabs example">
 					<LinkTab label="About" href="/about" {...a11yProps(0)} />
 					<LinkTab label="Projects" href="/projects" {...a11yProps(1)} />
-					<LinkTab label="Interests" href="/interests" {...a11yProps(2)} />
+					<LinkTab label="Blog" href="/blog" {...a11yProps(2)} />
 				</Tabs>
 			</AppBar>
 			<TabPanel value={value} index={0}>
-				about
+				{DisplayAbout()}
 			</TabPanel>
 			<TabPanel value={value} index={1}>
 				{DisplayProjectCard()}
 			</TabPanel>
 			<TabPanel value={value} index={2}>
-				Interests
+				{DisplayBlog()}
 			</TabPanel>
 		</div>
 	);
