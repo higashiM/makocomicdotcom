@@ -1,14 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import ProjectCard from './components/ProjectCard';
-import { projectText } from './resources/projectCards/projectText';
-import DisplayProjectCard from './DisplayProjectCard';
-import SolidGameCardDemo from './Test';
-import TabPanel from './components/NavBar';
+import "./App.css";
+import React from "react";
+import { Grid, Link } from "@material-ui/core";
+import TabPanel from "./components/TabPanel";
+import Footer from "./components/Footer";
+import { makeStyles } from "@material-ui/core/styles";
 
 function App() {
-	return TabPanel();
+  const useStyles = makeStyles({
+    root: {
+      //padding: '30px 30px'
+    },
+
+    container: {
+      display: "grid",
+      gridTemplateColumns: "1fr",
+      padding: "10px 10px",
+    },
+  });
+
+  const classes = useStyles();
+  return (
+    <Grid container spacing={0} className={classes.container} wrap={"nowrap"}>
+      <Grid item>{TabPanel()}</Grid>
+
+      <Grid item>{Footer()}</Grid>
+    </Grid>
+  );
 }
 
 export default App;

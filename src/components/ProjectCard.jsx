@@ -12,10 +12,20 @@ import aisleNav from "../resources/projectCards/aisleNavigate.png";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 400,
+    maxWidth: 600,
+  },
+  Card: {
+    width: 300,
+    margin: "auto",
   },
   media: {
-    height: 400,
+    height: 600,
+    width: "100%",
+    objectFit: "cover",
+  },
+
+  typography: {
+    fontSize: 36,
   },
 });
 
@@ -38,6 +48,8 @@ export default function ProjectCard(props) {
   const [altText, setAltText] = useState(false);
   const classes = useStyles();
 
+  const links = [gitHubFront, gitHubBack, frontURL, backURL, presentation];
+
   if (altText)
     return (
       <Card className={classes.root}>
@@ -57,21 +69,35 @@ export default function ProjectCard(props) {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" color="primary">
-            <Link href={gitHubFront} target="_blank">
-              Git-FE
-            </Link>
-          </Button>
-          <Button size="small" color="primary">
-            <Link href={gitHubBack} target="_blank">
-              Git-BE
-            </Link>
-          </Button>
-          <Button size="small" color="primary">
-            <Link href={backURL} target="_blank">
-              API
-            </Link>
-          </Button>
+          {gitHubFront === "" ? (
+            ""
+          ) : (
+            <Button size="small" color="primary">
+              <Link href={gitHubFront} target="_blank">
+                Git-FE
+              </Link>
+            </Button>
+          )}
+
+          {gitHubBack === "" ? (
+            ""
+          ) : (
+            <Button size="small" color="primary">
+              <Link href={gitHubBack} target="_blank">
+                Git-BE
+              </Link>
+            </Button>
+          )}
+
+          {backURL === "" ? (
+            ""
+          ) : (
+            <Button size="small" color="primary">
+              <Link href={backURL} target="_blank">
+                API
+              </Link>
+            </Button>
+          )}
           <Button
             size="small"
             color="primary"
@@ -102,12 +128,15 @@ export default function ProjectCard(props) {
             Try it Out!
           </Link>
         </Button>
-
-        <Button size="small" color="primary">
-          <Link href={presentation} target="_blank">
-            YouTube Project Video
-          </Link>
-        </Button>
+        {presentation === "" ? (
+          ""
+        ) : (
+          <Button size="small" color="primary">
+            <Link href={presentation} target="_blank">
+              YouTube Project Video
+            </Link>
+          </Button>
+        )}
         <Button
           size="small"
           color="primary"
