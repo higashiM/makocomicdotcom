@@ -1,16 +1,16 @@
 const projectText = [
   {
     title: "Squash Island",
-    description: `Currently under development is a 3D physics based squash game`,
+    description: `My current project under development is a 3D physics based squash game. A working demo has been released to itch.io`,
     altDescription:
-      "I chose squash as I play the game, it has interesting physics and AI shot choice to model and limited artistic requirements!",
-    imgSrc: require("../../../src/resources/projectCards/oneDayCover.png"),
-    imgTitle: "Game Front Screen",
-    altImgSrc: require("../../../src/resources/projectCards/oneDayScreenShot.png"),
-    altImgTitle: "Screenshot of shopping list",
+      "I chose squash as the subject for a Unity 3D learning project as I love the game, it has interesting physics and AI shot choice to model and limited artistic requirements! The artwork and code were all created from scratch.",
+    imgSrc: require("../../../src/resources/projectCards/SquashCover.jpg"),
+    imgTitle: "Squash Game Front Screen",
+    altImgSrc: require("../../../src/resources/projectCards/SquashScreenShot.jpg"),
+    altImgTitle: "Screenshot of squash court",
     gitHubFront: "",
     gitHubBack: "",
-    frontURL: "https://higashimori.itch.io/one-day",
+    frontURL: "https://higashimori.itch.io/squash-island",
     backURL: "",
     presentation: "",
   },
@@ -19,7 +19,7 @@ const projectText = [
     title: "One Day",
     description: `My first original game was a Unity 2D Game built for GJL - Games Parade GameJam under the theme of Carpe Diem`,
     altDescription:
-      "The game jam lasted one week - all the artwork and code was created from scratch for the jam.",
+      "The game jam lasted one week - all the artwork and code were created entirely from scratch for the jam.",
     imgSrc: require("../../../src/resources/projectCards/oneDayCover.png"),
     imgTitle: "Game Front Screen",
     altImgSrc: require("../../../src/resources/projectCards/oneDayScreenShot.png"),
