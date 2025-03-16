@@ -81,8 +81,8 @@ export default function NavTabs() {
 			<AppBar position="static">
 				<Tabs variant="fullWidth" value={value} onChange={handleChange} aria-label="nav tabs">
 					<LinkTab className={classes.label} label="About" href="/about" {...a11yProps(0)} />
-					<LinkTab className={classes.label} label="Projects" href="/projects" {...a11yProps(1)} />
-					<LinkTab className={classes.label} label="Blog" href="/blog" {...a11yProps(2)} />
+					<LinkTab className={classes.label} label="Comics" href="/comics" {...a11yProps(1)} />
+					<LinkTab className={classes.label} label="Characters" href="/characters" {...a11yProps(2)} />
 				</Tabs>
 			</AppBar>
 			<TabPanel value={value} index={0}>

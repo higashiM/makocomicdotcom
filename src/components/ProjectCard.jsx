@@ -118,11 +118,11 @@ export default function ProjectCard(props) {
 				</CardContent>
 			</CardActionArea>
 			<CardActions>
-				<Button size="small" color="primary">
+				{/*<Button size="small" color="primary">
 					<Link href={frontURL} target="_blank">
 						Try it Out!
 					</Link>
-				</Button>
+				</Button>*/}
 				{presentation === '' ? (
 					''
 				) : (
@@ -132,9 +132,9 @@ export default function ProjectCard(props) {
 						</Link>
 					</Button>
 				)}
-				<Button size="small" color="primary" onClick={() => setAltText(!altText)}>
+				{/*<Button size="small" color="primary" onClick={() => setAltText(!altText)}>
 					more info
-				</Button>
+				</Button>*/}
 			</CardActions>
 		</Card>
 	);

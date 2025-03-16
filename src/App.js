@@ -26,7 +26,7 @@ function App() {
 		<Grid container spacing={0} className={classes.container} wrap={'nowrap'}>
 			<Grid item>{TabPanel()}</Grid>
 
-			<Grid item>{Footer()}</Grid>
+			{/*<Grid item>{Footer()}</Grid>*/}
 		</Grid>
 	);
 }
